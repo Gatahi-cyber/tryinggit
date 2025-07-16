@@ -1,0 +1,48 @@
+# 📦 filename: quirky_utils.py
+
+"""
+Quirky Utilities — because every repo needs a file that asks 'why not?'
+
+A grab bag of offbeat but potentially useful Python snippets.
+Feel free to expand, refactor, or question their existence.
+"""
+
+import random
+import datetime
+
+def random_proverb():
+    proverbs = [
+        "Even a snail will eventually reach Jerusalem 🐌",
+        "The wind does not break a tree that bends 🌳",
+        "Wisdom is like a baobab tree; one person’s arms can't embrace it 🌍",
+    ]
+    return random.choice(proverbs)
+
+def generate_mood_report():
+    moods = ['Ecstatic', 'Melancholy', 'Curious', 'Focused', 'Quirky']
+    mood = random.choice(moods)
+    now = datetime.datetime.now()
+    return f"Mood status at {now.strftime('%Y-%m-%d %H:%M:%S')} ➡️ {mood}"
+
+def reverse_with_style(text):
+    styles = ['✨', '🔥', '🔄', '🌪️']
+    return f"{random.choice(styles)} {text[::-1]} {random.choice(styles)}"
+
+def simulate_fellowship_invite(name):
+    time = random.choice(["6:30 PM", "7:00 PM", "6:45 PM"])
+    verse = random.choice([
+        "Hebrews 10:25", "Matthew 18:20", "Psalm 133:1"
+    ])
+    return f"Hey {name}, join us for fellowship at {time} ⛪ — themed on {verse}! 🙌"
+
+def convert_temperature(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return f"{celsius}°C = {fahrenheit:.2f}°F 🌡️"
+
+if __name__ == "__main__":
+    print("💫 Quirky Utility Sampler 💫")
+    print(random_proverb())
+    print(generate_mood_report())
+    print(reverse_with_style("Faith over fear"))
+    print(simulate_fellowship_invite("Bruce"))
+    print(convert_temperature(21))
