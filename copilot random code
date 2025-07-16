@@ -29,7 +29,7 @@ def reverse_with_style(text):
     return f"{random.choice(styles)} {text[::-1]} {random.choice(styles)}"
 
 def simulate_fellowship_invite(name):
-    time = random.choice(["6:30 PM", "7:00 PM", "6:45 PM"])
+    time = random.choice(["6:30 PM", "10:00 PM", "6:45 PM"])
     verse = random.choice([
         "Hebrews 10:25", "Matthew 18:20", "Psalm 133:1"
     ])
